@@ -1,0 +1,43 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: lab6_db
+    environment:
+      POSTGRES_USER: lab6user
+      POSTGRES_PASSWORD: lab6password
+      POSTGRES_DB: lab6db
+    ports:
+      - "5433:5432"
+    volumes:
+      - lab6_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lab6user -d lab6db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    container_name: lab6_app
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=postgresql://lab6user:lab6password@db:5432/lab6db
+      - NODE_ENV=production
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: always
+
+  db-push:
+    build: .
+    container_name: lab6_db_push
+    environment:
+      - DATABASE_URL=postgresql://lab6user:lab6password@db:5432/lab6db
+    command: ["npm", "run", "db:push"]
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  lab6_postgres_data:
