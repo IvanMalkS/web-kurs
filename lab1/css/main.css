@@ -1,0 +1,154 @@
+:root {
+  --primary: #0a6ebd;
+  --secondary: #eaf3fb;
+  --text: #2c2c2c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.page {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: #f5f7fa;
+}
+
+/* HEADER */
+.header {
+  background: var(--primary);
+  color: #fff;
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__logo {
+  width: 80px;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 15px;
+}
+
+.section--light {
+  background: var(--secondary);
+}
+
+.section__title {
+  margin-bottom: 25px;
+  color: var(--primary);
+}
+
+/* NEWS */
+.news {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.news__item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* SERVICES */
+.services {
+  padding-left: 20px;
+}
+
+.services__item {
+  margin-bottom: 10px;
+}
+
+/* DOCTORS */
+.doctors {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.doctor-card {
+  background: #fff;
+  width: 220px;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.doctor-card__photo {
+  width: 100%;
+  border-radius: 10px;
+  height: 289px;
+}
+
+/* SCHEDULE */
+.schedule {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.schedule__cell {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+/* CONTACTS */
+.contacts__button {
+  padding: 10px 15px;
+  background: var(--primary);
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ADAPTIVE */
+@media (max-width: 768px) {
+  .header__container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav__link {
+    margin: 0 8px;
+  }
+}
