@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>Медицинский центр «Здоровье+»</title>
+    <title>Новости - МЦ «Здоровье+»</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -15,11 +15,11 @@
         </div>
 
         <nav class="nav">
-          <a class="nav__link" href="#news">Новости</a>
-          <a class="nav__link" href="#services">Услуги</a>
-          <a class="nav__link" href="#doctors">Специалисты</a>
-          <a class="nav__link" href="#schedule">Расписание</a>
-          <a class="nav__link" href="#contacts">Контакты</a>
+          <a class="nav__link nav__link--active" href="index.html">Новости</a>
+          <a class="nav__link" href="services.html">Услуги</a>
+          <a class="nav__link" href="doctors.html">Специалисты</a>
+          <a class="nav__link" href="schedule.html">Расписание</a>
+          <a class="nav__link" href="contacts.html">Контакты</a>
         </nav>
       </div>
     </header>
@@ -29,77 +29,18 @@
         <h2 class="section__title">Новости и акции</h2>
 
         <div class="news">
-          <article class="news__item">Скидка 20% на первичный приём терапевта</article>
-          <article class="news__item">Новое оборудование для УЗИ-диагностики</article>
-          <article class="news__item">Бесплатная вакцинация для детей</article>
-        </div>
-      </section>
-
-      <section class="section" id="services">
-        <h2 class="section__title">Наши услуги</h2>
-
-        <ul class="services">
-          <li class="services__item">Терапия</li>
-          <li class="services__item">Кардиология</li>
-          <li class="services__item">Неврология</li>
-          <li class="services__item">УЗИ и функциональная диагностика</li>
-          <li class="services__item">Лабораторные исследования</li>
-        </ul>
-      </section>
-
-      <section class="section section--light" id="doctors">
-        <h2 class="section__title">Наши специалисты</h2>
-
-        <div class="doctors">
-          <div class="doctor-card">
-            <img src="img/doctor-1.jpg" class="doctor-card__photo" alt="" />
-            <h3 class="doctor-card__name">Иванова И.И.</h3>
-            <p class="doctor-card__specialty">Терапевт</p>
-          </div>
-
-          <div class="doctor-card">
-            <img src="img/doctor-2.jpg" class="doctor-card__photo" alt="" />
-            <h3 class="doctor-card__name">Петроваа А.В.</h3>
-            <p class="doctor-card__specialty">Кардиолог</p>
-          </div>
-
-          <div class="doctor-card">
-            <img src="img/doctor-3.jpg" class="doctor-card__photo" alt="" />
-            <h3 class="doctor-card__name">Сидорова Д.М.</h3>
-            <p class="doctor-card__specialty">Невролог</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="schedule">
-        <h2 class="section__title">Расписание приёма</h2>
-
-        <table class="schedule">
-          <tr class="schedule__row">
-            <th class="schedule__cell">Врач</th>
-            <th class="schedule__cell">Будни</th>
-            <th class="schedule__cell">Суббота</th>
-          </tr>
-          <tr class="schedule__row">
-            <td class="schedule__cell">Иванова И.И.</td>
-            <td class="schedule__cell">09:00–17:00</td>
-            <td class="schedule__cell">09:00–13:00</td>
-          </tr>
-          <tr class="schedule__row">
-            <td class="schedule__cell">Петрова А.В.</td>
-            <td class="schedule__cell">10:00–18:00</td>
-            <td class="schedule__cell">—</td>
-          </tr>
-        </table>
-      </section>
-
-      <section class="section section--light" id="contacts">
-        <h2 class="section__title">Контакты</h2>
-
-        <div class="contacts">
-          <p class="contacts__text">г. Пермь, ул. Ленина, 10</p>
-          <button class="contacts__button" onclick="getLocation()">Определить моё местоположение</button>
-          <p class="contacts__location" id="location"></p>
+          <article class="news__item">
+            <h3>Сезонная скидка</h3>
+            <p>Скидка 20% на первичный приём терапевта в феврале.</p>
+          </article>
+          <article class="news__item">
+            <h3>Обновление парка</h3>
+            <p>Новое оборудование для УЗИ-диагностики экспертного класса.</p>
+          </article>
+          <article class="news__item">
+            <h3>Забота о детях</h3>
+            <p>Бесплатная вакцинация для детей до 7 лет по субботам.</p>
+          </article>
         </div>
       </section>
     </main>
@@ -107,7 +48,5 @@
     <footer class="footer">
       <p class="footer__text">© 2026 Медицинский центр «Здоровье+»</p>
     </footer>
-
-    <script src="js/geo.js"></script>
   </body>
 </html>

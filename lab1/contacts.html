@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Контакты - МЦ «Здоровье+»</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__brand">
+          <img src="img/logo.svg" alt="Логотип" class="header__logo" />
+          <span class="header__title">МЦ «Здоровье+»</span>
+        </div>
+
+        <nav class="nav">
+          <a class="nav__link" href="index.html">Новости</a>
+          <a class="nav__link" href="services.html">Услуги</a>
+          <a class="nav__link" href="doctors.html">Специалисты</a>
+          <a class="nav__link" href="schedule.html">Расписание</a>
+          <a class="nav__link nav__link--active" href="contacts.html">Контакты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="section section--light" id="contacts">
+        <h2 class="section__title">Контакты</h2>
+
+        <div class="contacts">
+          <div class="contacts__info">
+            <p class="contacts__text"><strong>Адрес:</strong> г. Пермь, ул. Ленина, 10</p>
+            <p class="contacts__text"><strong>Телефон:</strong> +7 (342) 222-33-44</p>
+            <p class="contacts__text"><strong>Email:</strong> info@healthplus.ru</p>
+          </div>
+          
+          <div class="contacts__geo">
+            <button class="contacts__button" onclick="getLocation()">Где я нахожусь?</button>
+            <p class="contacts__location" id="location"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">© 2026 Медицинский центр «Здоровье+»</p>
+    </footer>
+
+    <script src="js/geo.js"></script>
+  </body>
+</html>

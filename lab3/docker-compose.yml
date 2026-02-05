@@ -1,0 +1,40 @@
+services:
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: lab3_nginx
+    ports:
+      - '8089:80'
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      php:
+        condition: service_started
+
+  php:
+    build: ./php
+    container_name: lab3_php
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mysql:8.0
+    container_name: lab3_db
+    ports:
+      - '33089:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: lab3
+      MYSQL_USER: labuser
+      MYSQL_PASSWORD: labpass
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "labuser", "-plabpass"]
+      interval: 5s
+      timeout: 5s
+      retries: 10

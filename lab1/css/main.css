@@ -13,9 +13,11 @@ body.page {
   font-family: Arial, sans-serif;
   color: var(--text);
   background: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* HEADER */
 .header {
   background: var(--primary);
   color: #fff;
@@ -51,11 +53,19 @@ body.page {
   text-decoration: underline;
 }
 
-/* SECTIONS */
+.nav__link--active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.main {
+  flex: 1;
+}
+
 .section {
   max-width: 1200px;
   margin: auto;
-  padding: 40px 15px;
+  padding: 60px 15px;
 }
 
 .section--light {
@@ -67,7 +77,6 @@ body.page {
   color: var(--primary);
 }
 
-/* NEWS */
 .news {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -80,7 +89,6 @@ body.page {
   border-radius: 10px;
 }
 
-/* SERVICES */
 .services {
   padding-left: 20px;
 }
@@ -89,7 +97,6 @@ body.page {
   margin-bottom: 10px;
 }
 
-/* DOCTORS */
 .doctors {
   display: flex;
   gap: 25px;
@@ -110,7 +117,6 @@ body.page {
   height: 289px;
 }
 
-/* SCHEDULE */
 .schedule {
   width: 100%;
   border-collapse: collapse;
@@ -123,7 +129,6 @@ body.page {
   text-align: center;
 }
 
-/* CONTACTS */
 .contacts__button {
   padding: 10px 15px;
   background: var(--primary);
@@ -133,7 +138,6 @@ body.page {
   cursor: pointer;
 }
 
-/* FOOTER */
 .footer {
   background: var(--primary);
   color: #fff;
@@ -141,7 +145,6 @@ body.page {
   padding: 15px;
 }
 
-/* ADAPTIVE */
 @media (max-width: 768px) {
   .header__container {
     flex-direction: column;
