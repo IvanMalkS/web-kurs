@@ -15,8 +15,10 @@ require __DIR__ . '/templates/nav.php';
             </div>
             
             <div class="contacts__geo">
-                <button class="contacts__button" onclick="getLocation()" style="background: var(--primary); color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 15px;">Где я нахожусь?</button>
-                <p id="location" style="margin-top: 10px;"></p>
+                <button class="contacts__button contacts__button--geo" onclick="getLocation()">
+                    Где я нахожусь?
+                </button>
+                <p id="location" class="contacts__location"></p>
             </div>
         </div>
     </section>

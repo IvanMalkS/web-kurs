@@ -98,7 +98,7 @@ body.page {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .news__item h3 {
@@ -133,7 +133,7 @@ body.page {
   padding: 15px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   border: 1px solid #eee;
   transition: transform 0.2s;
 }
@@ -174,7 +174,7 @@ body.page {
   padding: 30px;
   border-radius: 10px;
   max-width: 500px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form__group {
@@ -187,13 +187,16 @@ body.page {
   font-weight: bold;
 }
 
-.form__input, .form__select {
+.form__input,
+.form__select {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
 
 .form__input--invalid {
@@ -288,12 +291,25 @@ tbody .schedule__row:nth-child(even) {
   }
 }
 
-
 .section--appointment {
   display: flex;
   min-width: 400px;
   justify-content: center;
-flex-direction: column;
+  flex-direction: column;
   width: min-content;
   margin: 0 auto;
+}
+
+.contacts__button--geo {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.contacts__location {
+  margin-top: 10px;
 }

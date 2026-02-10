@@ -128,6 +128,31 @@ body {
   background: #2980b9;
 }
 
+.news__link--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.news__empty {
+  text-align: center;
+  padding: 50px;
+  background: white;
+  border-radius: 12px;
+}
+
+.news__image-container {
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 180px;
+}
+
+.news__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .footer {
   background: var(--primary);
   color: rgba(255, 255, 255, 0.6);

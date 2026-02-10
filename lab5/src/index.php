@@ -46,7 +46,7 @@ if ($weatherData && isset($weatherData['hourly'])) {
         <p class="section__subtitle">Данные получены в реальном времени через Open-Meteo API для г. Пермь.</p>
 
         <?php if ($error): ?>
-            <div style="background: #f8d7da; color: #721c24; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+            <div class="error-message">
                 <strong>Ошибка:</strong> <?= htmlspecialchars($error) ?>
             </div>
         <?php endif; ?>
@@ -65,16 +65,16 @@ if ($weatherData && isset($weatherData['hourly'])) {
                 </thead>
                 <tbody>
                     <?php if (empty($rows)): ?>
-                        <tr><td colspan="6" style="text-align: center; padding: 40px;">Нет данных для отображения</td></tr>
+                        <tr><td colspan="6" class="table__no-data">Нет данных для отображения</td></tr>
                     <?php else: ?>
                         <?php foreach ($rows as $index => $row): ?>
                             <tr>
                                 <td><?= $row['time'] ?></td>
-                                <td class="temp-cell" style="text-align: center;"><?= $row['temp'] ?></td>
-                                <td style="text-align: center;"><?= $row['humidity'] ?></td>
-                                <td style="text-align: center;"><?= $row['wind'] ?></td>
-                                <td style="text-align: center;"><?= $row['precip'] ?></td>
-                                <td style="text-align: center;"><?= $row['pressure'] ?></td>
+                                <td class="temp-cell table__cell" style="text-align: center;"><?= $row['temp'] ?></td>
+                                <td class="table__cell" style="text-align: center;"><?= $row['humidity'] ?></td>
+                                <td class="table__cell" style="text-align: center;"><?= $row['wind'] ?></td>
+                                <td class="table__cell" style="text-align: center;"><?= $row['precip'] ?></td>
+                                <td class="table__cell" style="text-align: center;"><?= $row['pressure'] ?></td>
                             </tr>
                         <?php endforeach; ?>
                     <?php endif; ?>

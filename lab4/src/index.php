@@ -17,7 +17,7 @@ if (file_exists($jsonFile)) {
         <p class="section__subtitle">Автоматизированный мониторинг цен и комплектаций</p>
 
         <?php if (empty($items)): ?>
-            <div style="text-align: center; padding: 50px; background: white; border-radius: 12px;">
+            <div class="news__empty">
                 <p>Данные в данный момент недоступны. Запустите процесс парсинга.</p>
             </div>
         <?php else: ?>
@@ -25,8 +25,8 @@ if (file_exists($jsonFile)) {
                 <?php foreach ($items as $item): ?>
                     <article class="news__item">
                         <?php if (!empty($item['photo'])): ?>
-                            <div class="news__image-container" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; height: 180px;">
-                                <img src="<?= htmlspecialchars($item['photo']) ?>" alt="<?= htmlspecialchars($item['title']) ?>" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="news__image-container">
+                                <img src="<?= htmlspecialchars($item['photo']) ?>" alt="<?= htmlspecialchars($item['title']) ?>" class="news__image">
                             </div>
                         <?php endif; ?>
                         <h3 class="news__title"><?= htmlspecialchars($item['title']) ?></h3>
@@ -35,7 +35,7 @@ if (file_exists($jsonFile)) {
                         <?php if ($item['link'] !== '#' && !empty($item['link'])): ?>
                             <a href="<?= htmlspecialchars($item['link']) ?>" target="_blank" class="news__link">Детали на сайте</a>
                         <?php else: ?>
-                            <span class="news__link" style="opacity: 0.5; cursor: not-allowed;">В архиве</span>
+                            <span class="news__link news__link--disabled">В архиве</span>
                         <?php endif; ?>
                     </article>
                 <?php endforeach; ?>

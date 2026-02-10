@@ -17,7 +17,11 @@
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family:
+    'Segoe UI',
+    system-ui,
+    -apple-system,
+    sans-serif;
   background: var(--bg-gradient);
   color: var(--text);
   min-height: 100vh;
@@ -33,7 +37,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .header__container {
@@ -63,7 +67,7 @@ body {
 }
 
 .nav__link {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   font-weight: 500;
   transition: opacity 0.2s;
@@ -85,7 +89,7 @@ body {
   background: var(--card-bg);
   padding: 40px;
   border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(10px);
 }
 
@@ -108,7 +112,7 @@ body {
   margin-top: 30px;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .schedule {
@@ -133,7 +137,7 @@ body {
 
 .schedule td {
   padding: 14px 16px;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .schedule tbody tr:hover td {
@@ -148,7 +152,7 @@ body {
 
 .footer {
   background: rgba(44, 62, 80, 0.9);
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   padding: 2rem 0;
   text-align: center;
   margin-top: 60px;
@@ -159,17 +163,35 @@ body {
   font-weight: 500;
 }
 
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.table__no-data {
+  text-align: center;
+  padding: 40px;
+}
+
+.table__cell {
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 20px;
     border-radius: 16px;
   }
-  
+
   .section__title {
     font-size: 1.8rem;
   }
-  
-  .schedule th, .schedule td {
+
+  .schedule th,
+  .schedule td {
     padding: 10px;
     font-size: 0.9rem;
   }
