@@ -1,4 +1,4 @@
-import { Cpu, Github, Twitter, Linkedin } from "lucide-react";
+import { Cpu, Github, Twitter, Linkedin } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -11,10 +11,11 @@ export function Footer() {
               <span className="text-primary">ТехГид</span>
             </div>
             <p className="text-muted-foreground text-sm max-w-sm">
-              Ваш надежный источник глубоких обзоров техники, последних новостей из мира гаджетов и актуального календаря релизов. Будьте первыми в курсе новинок.
+              Ваш надежный источник глубоких обзоров техники, последних новостей из мира гаджетов и актуального календаря релизов. Будьте
+              первыми в курсе новинок.
             </p>
           </div>
-          
+
           <div>
             <h3 className="font-bold mb-4 uppercase text-xs tracking-widest text-slate-500">Навигация</h3>
             <ul className="space-y-2 text-sm text-foreground/80">
@@ -24,23 +25,32 @@ export function Footer() {
               <li className="hover:text-primary transition-colors cursor-pointer">О нас</li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-bold mb-4 uppercase text-xs tracking-widest text-slate-500">Мы в сети</h3>
             <div className="flex gap-4">
-              <a href="#" className="h-10 w-10 rounded-full bg-white border flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">
+              <a
+                href="#"
+                className="h-10 w-10 rounded-full bg-white border flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm"
+              >
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="#" className="h-10 w-10 rounded-full bg-white border flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">
+              <a
+                href="#"
+                className="h-10 w-10 rounded-full bg-white border flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm"
+              >
                 <Github className="w-4 h-4" />
               </a>
-              <a href="#" className="h-10 w-10 rounded-full bg-white border flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">
+              <a
+                href="#"
+                className="h-10 w-10 rounded-full bg-white border flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm"
+              >
                 <Linkedin className="w-4 h-4" />
               </a>
             </div>
           </div>
         </div>
-        
+
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
           © {new Date().getFullYear()} ТехГид Обзоры. Все права защищены.
         </div>

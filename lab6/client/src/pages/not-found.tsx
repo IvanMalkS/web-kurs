@@ -1,7 +1,7 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useLocation } from "wouter";
+import { Card, CardContent } from '@/components/ui/card';
+import { AlertCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useLocation } from 'wouter';
 
 export default function NotFound() {
   const [, navigate] = useLocation();
@@ -15,10 +15,8 @@ export default function NotFound() {
             <h1 className="text-2xl font-bold text-gray-900">404 Страница не найдена</h1>
           </div>
 
-          <p className="mt-4 text-sm text-gray-600">
-            Возможно, вы не туда зашли, попробуйте вернуться на главную страницу
-          </p>
-          <Button onClick={() => navigate("/")}>На главную</Button>
+          <p className="mt-4 text-sm text-gray-600">Возможно, вы не туда зашли, попробуйте вернуться на главную страницу</p>
+          <Button onClick={() => navigate('/')}>На главную</Button>
         </CardContent>
       </Card>
     </div>
